@@ -47,7 +47,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - [Solution URL:](https://github.com/akmtasdikulislam/interactive-rating-component)
-- [Live Site URL:](https://your-live-site-url.com)
+- [Live Site URL:](https://akmtasdikulislam.github.io/interactive-rating-component/)
 
 ## My process
 

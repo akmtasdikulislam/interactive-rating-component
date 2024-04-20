@@ -1,12 +1,13 @@
  :root {
      /* Primary Colours */
-     --orange        : hsl(25, 97%, 53%);
+     --orange         : hsl(25, 97%, 53%);
      /* Neutral Colours */
-     --white         : hsl(0, 0%, 100%);
-     --light-grey    : hsl(217, 12%, 63%);
-     --medium-grey   : hsl(216, 12%, 54%);
-     --dark-blue     : hsl(213, 19%, 18%);
-     --very-dark-blue: hsl(216, 12%, 8%);
+     --white          : hsl(0, 0%, 100%);
+     --light-grey     : hsl(217, 12%, 63%);
+     --medium-grey    : hsl(216, 12%, 54%);
+     --light-dark-blue: hsl(213, 19%, 20%);
+     --dark-blue      : hsl(213, 19%, 15%);
+     --very-dark-blue : hsl(216, 12%, 8%);
 
      /* Base Font-size */
      font-size: 15px;
@@ -22,14 +23,95 @@
  }
 
  body {
+     align-items     : center;
      background-color: var(--very-dark-blue);
+     display         : flex;
+     flex-direction  : column;
      font-family     : "Overpass", sans-serif;
+     gap             : 2.2em;
+     justify-content : center;
      min-height      : 100vh;
      min-width       : 100vw;
      overflow        : hidden;
  }
 
+ main {
+     background-color: var(--dark-blue);
+     border-radius   : 1.8em;
+     height          : 27.75em;
+     padding         : 2.25em;
+     width           : 27.5em;
+ }
+
+ main #rating-state {
+     display        : flex;
+     flex-direction : column;
+     height         : 100%;
+     justify-content: space-between;
+ }
+
+ main #rating-state #star {
+     align-items     : center;
+     background-color: var(--light-dark-blue);
+     border-radius   : 50%;
+     display         : flex;
+     height          : 3.2em;
+     justify-content : center;
+     padding         : 1em;
+     width           : 3.2em;
+ }
+
+ main #rating-state #star img {
+     height: fit-content;
+     width : fit-content;
+ }
+
+ main #rating-state h1 {
+     color      : var(--white);
+     font-size  : 1.85em;
+     font-weight: 600;
+ }
+
+ main #rating-state p {
+     color      : var(--light-grey);
+     font-size  : 1.05em;
+     line-height: 1.6em;
+     margin-top : -1em;
+ }
+
+ main #rating-state .rating {
+     display        : flex;
+     flex-direction : row;
+     justify-content: space-between;
+ }
+
+ main #rating-state .rating .rating-item {
+     align-items     : center;
+     background-color: var(--light-dark-blue);
+     border-radius   : 50%;
+     color           : var(--medium-grey);
+     display         : flex;
+     height          : 3.5em;
+     justify-content : center;
+     width           : 3.5em;
+ }
+
+ main #rating-state #submit-button {
+     background-color: var(--orange);
+     border          : 0;
+     border-radius   : 5em;
+     color           : var(--white);
+     font-weight     : 600;
+     height          : max-content;
+     letter-spacing  : 0.15em;
+     padding         : 1em 0;
+     text-align      : center;
+     text-transform  : uppercase;
+     width           : 100%;
+ }
+
  .attribution {
+     color     : var(--white);
      font-size : 1em;
      text-align: center;
  }
