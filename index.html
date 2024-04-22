@@ -23,8 +23,8 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <!-- Rating state start -->
     <main>
+      <!-- Rating state start -->
       <div id="rating-state">
         <div id="star">
           <img src="./images/icon-star.svg" alt="" />
@@ -43,17 +43,22 @@
         </div>
         <button id="submit-button">Submit</button>
       </div>
+      <!-- Rating state end -->
+      <!-- Thank you state start -->
+
+      <div id="thank_you-state">
+        <img src="./images/illustration-thank-you.svg" alt="" />
+        <div class="highlight">
+          You selected <span id="rating">4</span> out of 5
+        </div>
+        <h1>Thank you!</h1>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don&apos;t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Thank you state end -->
     </main>
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    <!-- You selected -->
-    <!-- Add rating here -->
-    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch! -->
-
-    <!-- Thank you state end -->
 
     <div class="attribution">
       Challenge by
@@ -66,7 +71,6 @@
     </div>
     <script>
       const ratingItems = document.querySelectorAll(".rating-item"); // selecting all rating-items.
-
       ratingItems.forEach(
         (
           item //running a forEach loop on page load to add  a CLICK event-listener to all rating-items

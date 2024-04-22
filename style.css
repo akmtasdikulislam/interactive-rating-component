@@ -44,7 +44,7 @@
  }
 
  main #rating-state {
-     display        : flex;
+     display        : none;
      flex-direction : column;
      height         : 100%;
      justify-content: space-between;
@@ -129,6 +129,44 @@
      color           : var(--orange);
      cursor          : pointer;
      transition      : all ease-in-out .3s;
+ }
+
+ main #thank_you-state {
+     align-items    : center;
+     display        : flex;
+     flex-direction : column;
+     height         : 100%;
+     justify-content: space-between;
+     width          : 100%;
+ }
+
+ main #thank_you-state img {
+     margin-left: -.6em;
+     margin-top : .8em;
+ }
+
+ main #thank_you-state .highlight {
+     background-color: var(--light-dark-blue);
+     border-radius   : 5em;
+     color           : var(--orange);
+     height          : fit-content;
+     margin-top      : 1.25em;
+     padding         : .5em 1.4em;
+     width           : fit-content;
+ }
+
+ main #thank_you-state h1 {
+     color      : var(--white);
+     font-weight: 600;
+     margin-top : .5em;
+ }
+
+ main #thank_you-state p {
+     color      : var(--medium-grey);
+     font-size  : 1.01em;
+     font-size  : 600;
+     line-height: 1.75em;
+     text-align : center;
  }
 
  .attribution {
