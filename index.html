@@ -35,7 +35,7 @@
           is appreciated to help us improve our offering!
         </p>
         <div class="rating">
-          <div class="rating-item">1</div>
+          <div class="rating-item active">1</div>
           <div class="rating-item">2</div>
           <div class="rating-item">3</div>
           <div class="rating-item">4</div>
@@ -64,5 +64,22 @@
         >Akm Tasdikul Islam</a
       >.
     </div>
+    <script>
+      const ratingItems = document.querySelectorAll(".rating-item"); // selecting all rating-items.
+
+      ratingItems.forEach(
+        (
+          item //running a forEach loop on page load to add  a CLICK event-listener to all rating-items
+        ) =>
+          item.addEventListener("click", () => {
+            // when a rating-item is clicked, at first it checks if it is already active or not by determining whether it is already containing the "active" class. Then removing "active" class from the element (if it has any). Finally adding "active" class to show its content.
+            const isItemActive = item.classList.contains("active");
+            ratingItems.forEach((item) => item.classList.remove("active"));
+            if (!isItemActive) {
+              item.classList.toggle("active");
+            }
+          })
+      );
+    </script>
   </body>
 </html>
