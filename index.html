@@ -35,7 +35,7 @@
           is appreciated to help us improve our offering!
         </p>
         <div class="rating">
-          <div class="rating-item active">1</div>
+          <div class="rating-item">1</div>
           <div class="rating-item">2</div>
           <div class="rating-item">3</div>
           <div class="rating-item">4</div>
@@ -70,7 +70,11 @@
       >.
     </div>
     <script>
+      const ratingState = document.getElementById("rating-state");
+      const thank_youState = document.getElementById("thank_you-state");
       const ratingItems = document.querySelectorAll(".rating-item"); // selecting all rating-items.
+      const submitButton = document.getElementById("submit-button");
+      const rating = document.getElementById("rating");
       ratingItems.forEach(
         (
           item //running a forEach loop on page load to add  a CLICK event-listener to all rating-items
@@ -84,6 +88,26 @@
             }
           })
       );
+
+      submitButton.addEventListener("click", () => {
+        // Adding an event-listener to submit button.
+        let activeRatingItem = []; // Declaring an empty array, where the selected rating will be stored to future use on the "Thank you" STATE.
+        ratingItems.forEach((item) => {
+          //running a forEach loop on page load to add  a CLICK event-listener to all rating-items
+          if (item.classList.contains("active")) {
+            // on submit, if any rating item is marked as active, it will be stored in the previously declared "activeRatingItem" array.
+            activeRatingItem.push(item.innerHTML);
+          }
+        });
+        // If no rating item is selected (empty activeRatingItem array), it will show an alert message otherwise "Thank you" STATE will be shown.
+        if (activeRatingItem.length < 1) {
+          alert("⚠️ Please provide a rating before submiting");
+        } else {
+          rating.innerText = activeRatingItem[0];
+          ratingState.style.display = "none";
+          thank_youState.style.display = "flex";
+        }
+      });
     </script>
   </body>
 </html>
