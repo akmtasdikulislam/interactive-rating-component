@@ -63,7 +63,7 @@ By doing this project I learned how to create a rating feedback component.
 
 - [Four Different Ways to Search an Array in JavaScript](https://www.freecodecamp.org/news/4-methods-to-search-an-array/) - This helped me to know how to use find() mtehod on an array in javascript.
 
-- [Four Different Ways to Search an Array in JavaScript](https://www.freecodecamp.org/news/4-methods-to-search-an-array/) - This helped me to match UI with the provided _UI Design Sample_
+- [PerfectPixel by WellDoneCode](https://www.welldonecode.com/) - This helped me to match UI with the provided _UI Design Sample_
 
 ## Author
 
